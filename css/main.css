@@ -1,0 +1,39 @@
+/*
+Parent elements:
+
+Main axis (ltr) - row - default on display: flex
+Column - elements width 100%, top to bottom
+Justify content - this is the main axis - determine spacing ltr
+Align items - for cross axis - default is stretch | baseline - align CENTER of container for each item
+Flex wrap - fix items overflowing container | default NO WRAP
+Align-content - only valid if you have multiple rows
+
+
+Child elements:
+Order - default is 0 - use -1 to move to beginning
+
+flex row
+flex shrink - 1 - default - allowed to shrink, 0 is NOT allowed to shrink
+flex basis
+*/
+
+.container {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid white;
+    width: 400px;
+}
+
+.container div {
+    margin: 0;
+    width: 200px;
+    float: right;
+}
+
+.container div:nth-child(2) {
+flex-shrink: 2;
+}
+
+.container div:nth-child(3) {
+
+}
